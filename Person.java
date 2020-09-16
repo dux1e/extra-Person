@@ -55,7 +55,10 @@ public class Person
     /**
      * Method to calculate persons age from CPR
      */
-    public int getPersonAge() {
+    //Man kan lave en intput type int, så man har valget et indsætte et nyt eller bestemt år
+    //For at se denne metode kig på kommentarene
+    public int getPersonAge(/*int year*/) {
+        //int now = year
         int millenniumCentury = Integer.parseInt(cprno.substring(6,7));
         if(millenniumCentury < 5) {
             millenniumCentury = 19;
@@ -65,6 +68,7 @@ public class Person
         String stringFullYear = millenniumCentury + cprno.substring(4,6);
         int intFullYear = Integer.parseInt(stringFullYear);
         int personAge = 2020 - intFullYear;
+        //int personAge = now - intFullyear;
         return personAge;
     }
     
